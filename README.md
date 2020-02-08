@@ -1,4 +1,4 @@
-# EECS3421-DB
+# Course work for EECS3421 Fall 2018
 IBM DB2 
 
-#Course work for EECS3421 Fall 2018
+
