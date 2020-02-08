@@ -1,0 +1,1 @@
+select title, year, price from yrb_offer  where price > ( select avg(value)  from (select max(o.price) value  from yrb_book b, yrb_offer o  where b.title = o.title and  b.year = o.year  and b.language = 'English'  group by o.club))

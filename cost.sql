@@ -1,0 +1,2 @@
+Select h.cid as cid, DATE(h.when) as Day, h.price + (select min(s.cost) from yrb_shipping s where s.weight>=h.weight) as cost from (select x.cid, x.when, sum(x.price) as price, sum(x.weight) as weight from (select pp.cid, pp.when,
+   price*qnty as price, weight*qnty as weight from yrb_purchase pp,yrb_book bb,yrb_offer oo where bb.title=oo.title and bb.year = oo.year and oo.club = pp.club and oo.title=pp.title and oo.year = pp.year) as X group by x.cid, x.when order by x.cid) as h

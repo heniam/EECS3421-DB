@@ -1,0 +1,1 @@
+select * from (select count(*) AS #Basic FROM yrb_member where club = 'Basic') AS C1 INNER JOIN (select count(*) AS #AAA FROM yrb_member where club = 'AAA') AS C2 ON ( C1.#Basic <> C2.#AAA OR C1.#Basic = C2.#AAA)

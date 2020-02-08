@@ -1,0 +1,1 @@
+select distinct C1.name as CUSTOMERA , C2.name as CUSTOMERB from yrb_customer C1, yrb_customer C2, yrb_purchase p1, yrb_purchase p2 where C1.cid = p1.cid and C2.cid = p2.cid and p1.cid > p2.cid and p1.title = p2.title
